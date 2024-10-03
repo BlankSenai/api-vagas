@@ -5,7 +5,7 @@ import { SpaceProvider } from '../../database/providers'
 
 
 interface IBodyProps {
-  space: Omit<ISpace, 'id'>
+  space: Omit<ISpace, 'id' | 'numeroVaga'>
   id: Number
 }
 

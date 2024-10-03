@@ -1,7 +1,7 @@
 import { Knex } from '../../knex'
 import { ISpace } from '../../models'
 
-export const update = async (space: Omit<ISpace, 'id'>, id: Number): Promise<Number | Error> => {
+export const update = async (space: Omit<ISpace, 'id' | 'numeroVaga'>, id: Number): Promise<Number | Error> => {
   try {
     const result = await Knex('space')
       .update(space)
