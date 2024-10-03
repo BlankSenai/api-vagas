@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "rollback-all": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback --all",
+    "migrate": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:latest",
+    "start": "ts-node-dev ./src"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-status-codes": "^2.3.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "*"
+  }
+}
