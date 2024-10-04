@@ -1,1 +1,1 @@
-To start the server, use the script 'start' with npm. This will automatically create the database and its registers.
+To use it, install the dependencies and use the script "start" with npm in the console. This will automatically create the database and open a localhost port (3333). Then you can test the other application that uses this server.
