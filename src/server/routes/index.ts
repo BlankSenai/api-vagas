@@ -13,4 +13,6 @@ router.post('/spaces', SpaceController.post)
 router.delete('/spaces', SpaceController.deleteById)
 router.put('/spaces', SpaceController.update)
 
+router.post('/login', )
+
 export { router }
