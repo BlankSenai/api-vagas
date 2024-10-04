@@ -12,11 +12,7 @@ export const login = async (req: Request<{}, {}, IBodyProps>, res: Response) => 
   const user = await UserProvider.get(req.body.email)
 
   if (user instanceof Error) {
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-      errors: {
-        default: user.message
-      }
-    })
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(false)
   }
 
   if (user.senha === req.body.senha) {

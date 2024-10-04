@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { VehicleController, SpaceController } from '../controllers'
+import { VehicleController, SpaceController, UserController } from '../controllers'
 
 const router = Router()
 
@@ -13,6 +13,7 @@ router.post('/spaces', SpaceController.post)
 router.delete('/spaces', SpaceController.deleteById)
 router.put('/spaces', SpaceController.update)
 
-router.post('/login', )
+router.post('/login', UserController.login)
+router.post('/cadastrar', UserController.signUp)
 
 export { router }
